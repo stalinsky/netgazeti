@@ -3,7 +3,7 @@
 > Лёгкая Bootstrap-тема без плагинов, без сборщиков, без `wp_enqueue`.
 > Используется для **ru.netgazeti.ge**, форкается для **jnews.ge**, **nor.ge**, **ka.jnews.ge**, **ka.nor.ge**.
 
-**Текущая версия:** 2.57 · **Дата:** 25 апреля 2026 · **Авторы:** Muge Ozkaptan, Konstantin Stalinsky ([@StalinskyK](https://x.com/StalinskyK))
+**Текущая версия:** 2.57 · **Date:** 25 апреля 2026 · **Авторы:** Muge Ozkaptan, Konstantin Stalinsky ([@StalinskyK](https://x.com/StalinskyK))
 
 ---
 
