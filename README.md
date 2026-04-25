@@ -1,0 +1,2 @@
+# netgazeti
+Wordpress custom theme
