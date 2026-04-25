@@ -1,0 +1,198 @@
+/*
+Theme Name:   Netgazeti
+Theme URI:    https://itech.com.ge/
+Author:       Muge Ozkaptan, Konstantin Stalinsky (@StalinskyK)
+Author URI:   https://itech.com.ge/
+Description:  Лёгкая Bootstrap-тема для медиа-проекта Netgazeti на русском.
+              Без enqueue, без плагинов, всё подключается напрямую в header/footer.
+Version:      2.57
+Updated:      2026-04-25
+License:      GNU General Public License v3
+License URI:  http://www.gnu.org/licenses/gpl-3.0.html
+Tags:         bootstrap, light, two-columns, right-sidebar, responsive-layout, accessibility-ready
+Text Domain:  netgazeti
+*/
+
+/* ── Base ────────────────────────────────────────────────────── */
+html, body { scroll-behavior: smooth; font-family: 'Ubuntu', sans-serif; }
+a { transition: .5s all ease; text-decoration: none; }
+a, a:hover { color: #28a745; }
+hr { box-shadow: 1px 1px #ddd; }
+h1, h2, h3, h4, h5, h6 { font-weight: bolder; }
+
+article > p { font-size: 1.2rem; }
+article > h3 { margin: 1em 0 .5em 0; }
+article * { max-width: 100% !important; }
+blockquote { padding: 1rem; margin: 1rem 0; background: #fafafa; border-left: 3px solid #ddd; }
+
+img.article, article > img, article + img {
+    max-width: 100% !important;
+    image-rendering: -moz-crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: crisp-edges;
+}
+
+iframe { max-width: 100% !important; }
+img.ins { max-width: 100%; height: auto; }
+
+article > ul { list-style: none; color: #111; }
+article > ul li::before {
+    content: "\2022";
+    color: #28a745;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1.1em;
+}
+article li { font-size: 1.1rem; line-height: 170%; }
+
+.container { width: 100%; max-width: 1320px; }
+.article { font-size: 115%; }
+.list-group-item { padding: .75rem .15rem; }
+
+/* ── Navbar ──────────────────────────────────────────────────── */
+.nav-link { font-weight: bolder; margin-right: 2rem; }
+li > .nav .nav-item, li > .nav-item { margin-right: 0; }
+.navbar-light .navbar-nav .nav-link { color: #111; }
+
+/* ── Search overlay ──────────────────────────────────────────── */
+.openBtn {
+    background: #fff; border: none; padding: 1px;
+    margin: 1rem; font-size: 1rem; cursor: pointer;
+}
+.openBtn:hover { background: #f1f1f1; }
+
+.overlay {
+    height: 100%; width: 100%;
+    display: none; position: fixed;
+    z-index: 1; top: 0; left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+.overlay-content {
+    position: relative; top: 46%;
+    width: 80%; text-align: center;
+    margin: auto; margin-top: 30px;
+}
+.overlay .closebtn {
+    position: absolute; top: 20px; right: 45px;
+    font-size: 300%; cursor: pointer; color: white;
+}
+.overlay .closebtn:hover { color: #ccc; }
+.overlay input[type="search"] {
+    padding: 15px; font-size: 17px;
+    border: none; float: left;
+    width: 80%; background: white;
+}
+.overlay input[type="search"]:hover { background: #f1f1f1; }
+.overlay button {
+    float: left; width: 20%; padding: 16px;
+    background: #ddd; font-size: 17px;
+    border: none; cursor: pointer;
+}
+.overlay button:hover { background: #bbb; }
+
+/* ── Image gradient overlay ──────────────────────────────────── */
+.img-gradient { position: relative; display: inline-block; }
+.img-gradient:after {
+    content: ''; position: absolute;
+    left: 0; top: 0; width: 100%; height: 100%;
+    display: inline-block;
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.9) 100%);
+}
+.img-gradient img { display: block; border-radius: 0; }
+
+/* ── Tags / meta ─────────────────────────────────────────────── */
+.d-inline-block {
+    text-transform: uppercase;
+    font-size: .75rem;
+    letter-spacing: 1px;
+    color: #28a745;
+}
+a > .d-inline-block,
+a.d-inline-block,
+a:visited .d-inline-block,
+a.text-success { color: #28a745; }
+
+p.card-text, span.card-text {
+    font-family: 'Ubuntu', sans-serif;
+    color: #777; text-decoration: none;
+    margin: 1em 0; font-size: .95em;
+    letter-spacing: 1px;
+}
+
+/* ── Misc ────────────────────────────────────────────────────── */
+.bd-placeholder-img {
+    font-size: 1.125rem; text-anchor: middle;
+    user-select: none;
+}
+.blog-header { line-height: 1; border: 0; }
+.display-4 { font-size: 2.5rem; }
+.card-img-right { height: 100%; border-radius: 0 3px 3px 0; }
+.flex-auto { flex: 0 0 auto; }
+.h-250 { height: 250px; }
+.text-success { color: #28a745 !important; }
+.text-bg-success { background-color: #28a745 !important; }
+
+/* ── Pagination ──────────────────────────────────────────────── */
+.blog-pagination { margin-bottom: 2rem; }
+.blog-pagination > .btn { border-radius: 2rem; }
+.page-numbers {
+    margin: 25px 0; padding: .5rem;
+    font-size: 1.1rem; border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* ── Blog post chrome ────────────────────────────────────────── */
+.blog-post { margin-bottom: 4rem; }
+.blog-post-title { margin-bottom: .25rem; font-size: 2.5rem; }
+.blog-post-meta { margin-bottom: 1.25rem; color: #999; }
+
+/* ── Footer ──────────────────────────────────────────────────── */
+footer a { color: #fff; }
+footer a:hover { text-decoration: none; color: #28a745; }
+footer li { margin: 0 0 .5rem 0; }
+footer .card-title { margin-top: 2rem; font-size: 90%; color: #fdfdfd; }
+
+.blog-footer {
+    padding: 2.5rem 0; color: #999;
+    text-align: center; background-color: #f9f9f9;
+    border-top: .05rem solid #e5e5e5;
+}
+.blog-footer p:last-child { margin-bottom: 0; }
+
+.social-inner {
+    display: flex; flex-direction: column;
+    align-items: center; padding: 1rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+.social-container .col {
+    max-width: 30%;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ── Swiper tweaks (replaces Owl) ────────────────────────────── */
+.swiper { padding-bottom: 2rem; }
+.swiper-pagination-bullet-active { background: #28a745 !important; }
+.swiper-slide img { width: 100%; height: auto; }
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (min-width: 960px) {
+    .h-md-250 { height: 250px; }
+    .display-4 { font-size: 3rem; }
+    .card-img-overlay a { color: #fff; text-shadow: 2px 2px 3px #111; }
+    .navbar-expand-md .navbar-nav .nav-link { padding-right: 3rem; padding-left: 0; }
+}
+@media (max-width: 768px) {
+    h1, h2, h3, h4, h5, h6 { font-weight: bolder; font-size: 120%; }
+    article > p { font-size: 1rem; }
+    .card-img-overlay,
+    .carousel-caption {
+        position: relative;
+        justify-content: normal;
+        color: #111;
+        text-shadow: none !important;
+        background: none;
+    }
+    .card-img-overlay h3 { color: #111; }
+    .shadow { text-shadow: none; }
+}
